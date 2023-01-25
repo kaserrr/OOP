@@ -1,5 +1,5 @@
 <?php
-    class pokemon {
+    class Pokemon {
 
         public $pokeName;
         public $type;
@@ -28,8 +28,8 @@
         public $weaknessName;
         public $multiplier;
 
-        public function setWeakness($name, $mlt) {
-            $this->weaknessName = $name;
+        public function setWeakness($weaknessName, $mlt) {
+            $this->weaknessName = $weaknessName;
             $this->multiplier = $mlt;
         }
 

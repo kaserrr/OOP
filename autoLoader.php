@@ -1,11 +1,18 @@
 <?php
-    spl_autoload_register(function($class) {
-        require_once "classes/{$class}.php";
-    });
+    spl_autoload_register('autoLoader');
 
-    require_once "classes/createPokemon.php";
-    require_once "classes/pokemon.php";
-    require_once "classes/pokeBattle.php";
+    function autoLoader($className) {
+        $url = $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+        
+        if (strpos($url, 'includes') !== false) {
+            $path = '../classes/';
+        } else {
+            $path = 'classes/';
+        }
+        
+        $extension = '.class.php';
+        require_once $path . $className . $extension;
+    }
 
 
 
