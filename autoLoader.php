@@ -1,18 +1,10 @@
 <?php
-    spl_autoload_register('autoLoader');
-
-    function autoLoader($className) {
-        $url = $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
-        
-        if (strpos($url, 'includes') !== false) {
-            $path = '../classes/';
-        } else {
-            $path = 'classes/';
-        }
-        
-        $extension = '.class.php';
-        require_once $path . $className . $extension;
-    }
+// spl_autoload_register(function ($class_name) {
+//     $file_name = $class_name . '.php';
+//     if (file_exists($file_name)) {
+//         require_once $file_name;
+//     }
+// });
 
 
 

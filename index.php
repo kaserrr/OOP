@@ -1,8 +1,11 @@
 <?php
-    include "autoLoader.php";
+    include_once 'pokemonMethods.php';
 
-    pokeBattle($pikachu, $charmeleon);
+    $pikachu = new Pokemon("Pikachu", "Lightning", 60, 60, "Electric Ring", 50, "Pika Punch", 20, "Fire", 1.5, "Fighting", 20);
 
-    echo $pikachu;
+    $charmeleon = new Pokemon("Charmeleon", "Fire", 60, 60, "Head Butt", 10, "Flare", 30, "Water", 2, "Lighting", 10);
 
-    echo $charmeleon;
+
+    print_r($pikachu);
+
+    print_r($charmeleon);
