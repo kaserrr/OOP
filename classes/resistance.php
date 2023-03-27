@@ -1,15 +1,11 @@
 <?php
 
-class Resistance {
-    private $energyType;
-    private $resistanceValue;
+class Resistance extends Pokemon {
+    protected $energyType;
+    protected $resistanceValue;
 
     function __construct($energyType, $resistanceValue){
         $this->energyType = $energyType;
         $this->resistanceValue = $resistanceValue;
-    }
-
-    public function __toString() {
-        return json_encode($this);
     }
 }

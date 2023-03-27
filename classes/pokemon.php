@@ -1,17 +1,25 @@
 <?php
 
-class Pokemon {
-    private $name;
-    private $hitPoints;
-    private $health;
+      class Pokemon {
+        protected $base;
+        protected $attack;
+        protected $weakness;
+        protected $resistance;
+        protected $energytype;
+      
+        public function __construct($base, $attack, $weakness, $resistance, $energytype) {
+          $this->base = $base;
+          $this->attack = $attack;
+          $this->weakness = $weakness;
+          $this->resistance = $resistance;
+          $this->energytype = $energytype;
+        }
 
-    function __construct($name, $hitPoints, $health){
-        $this->name = $name;
-        $this->hitPoints = $hitPoints;
-        $this->health = $health;
-    }
+        function getData($data) {
+          return $this->$data;
+        }
 
-    public function __toString() {
-        return json_encode($this);
-    }
-}
+        public function __toString() {
+            return json_encode($this);
+        }
+      }
