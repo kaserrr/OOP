@@ -1,11 +1,21 @@
 <?php
 
-class Weakness extends Pokemon {
-    protected $energyType;
-    protected $multiplier;
+namespace PokemonApp\Classes;
 
-    function __construct($energyType, $multiplier){
+class Weakness {
+    private $energyType;
+    private $multiplier;
+
+    public function __construct($energyType, $multiplier) {
         $this->energyType = $energyType;
         $this->multiplier = $multiplier;
+    }
+
+    public function getEnergyType() {
+        return $this->energyType;
+    }
+
+    public function getMultiplier() {
+        return $this->multiplier;
     }
 }

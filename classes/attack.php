@@ -1,15 +1,21 @@
 <?php
 
-class Attack extends Pokemon {
-    protected $attack1;
-    protected $attack1Damage;
-    protected $attack2;
-    protected $attack2Damage;
+namespace PokemonApp\Classes;
 
-    function __construct($attack1, $attack1Damage, $attack2, $attack2Damage){
-        $this->attack1 = $attack1;
-        $this->attack1Damage = $attack1Damage;
-        $this->attack2 = $attack2;
-        $this->attack2Damage = $attack2Damage;
+class Attack {
+    private $name;
+    private $damage;
+
+    public function __construct($name, $damage) {
+        $this->name = $name;
+        $this->damage = $damage;
+    }
+
+    public function getName() {
+        return $this->name;
+    }
+
+    public function getDamage() {
+        return $this->damage;
     }
 }

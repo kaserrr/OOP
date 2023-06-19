@@ -1,11 +1,22 @@
+
 <?php
 
-class Resistance extends Pokemon {
-    protected $energyType;
-    protected $resistanceValue;
+namespace PokemonApp\Classes;
 
-    function __construct($energyType, $resistanceValue){
+class Resistance {
+    private $energyType;
+    private $value;
+
+    public function __construct($energyType, $value) {
         $this->energyType = $energyType;
-        $this->resistanceValue = $resistanceValue;
+        $this->value = $value;
+    }
+
+    public function getEnergyType() {
+        return $this->energyType;
+    }
+
+    public function getValue() {
+        return $this->value;
     }
 }

@@ -1,9 +1,15 @@
 <?php
 
-class EnergyType extends Pokemon {
-    protected $energyType;
+namespace PokemonApp\Classes;
 
-    function __construct($energyType){
-        $this->energyType = $energyType;
+class EnergyType {
+    private $name;
+
+    public function __construct($name) {
+        $this->name = $name;
+    }
+
+    public function getName() {
+        return $this->name;
     }
 }

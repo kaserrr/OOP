@@ -1,29 +1,20 @@
 <?php
-    include_once 'autoLoader.php';
-    include_once 'damageCalculator.php';
 
-    $pikachu = new Pokemon(
-        $base = new Base("Pikachu", 60, 60),
-        $attack = new Attack("Electric Ring", 50, "Pika Punch", 20),
-        $weakness = new Weakness("Fire", 1.5),
-        $resistance = new Resistance("Fighting", 20),
-        $energytype = new EnergyType("Lightning")
-    );
+namespace PokemonApp\Classes;
 
-    $charmeleon = new Pokemon(
-        $base = new Base("Charmeleon", 60, 60),
-        $attack = new Attack("Head Butt", 10, "Flare", 30),
-        $weakness = new Weakness("water", 2),
-        $resistance = new Resistance("Lightning", 10),
-        $energytype = new EnergyType("Fire")
-    );
+require "autoLoader.php";
 
-    $energytype1 = $charmeleon->getData('weakness')->getData('energyType');
+echo "Before Attack:\n";
+echo $pikachu->getName() . " health: " . $pikachu->getHealth() . "\n";
+echo $charmeleon->getName() . " health: " . $charmeleon->getHealth() . "\n";
 
-    $energytype2 = $pikachu->getData('energytype')->getData('energyType');
+echo "Population: " . Pokemon::getPopulation() . "\n";
 
-    $attack = $pikachu->getData('attack')->getData('attack1Damage');
+$pikachu->attack($charmeleon, 0);
+$charmeleon->attack($pikachu, 1);
 
-    $multiplier = $charmeleon->getData('weakness')->getData('multiplier');
+echo "After Attack:\n";
+echo $pikachu->getName() . " health: " . $pikachu->getHealth() . "\n";
+echo $charmeleon->getName() . " health: " . $charmeleon->getHealth() . "\n";
 
-    dmgCalculator($energytype1, $energytype2, $attack, $multiplier);
+echo "Population: " . Pokemon::getPopulation() . "\n";
