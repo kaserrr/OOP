@@ -1,6 +1,5 @@
 <?php
 
-namespace PokemonApp\Classes;
 
 class Attack {
     private $name;

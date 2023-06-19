@@ -1,6 +1,5 @@
 <?php
 
-namespace PokemonApp\Classes;
 
 class Pikachu extends Pokemon {
     public function __construct(){

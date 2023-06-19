@@ -1,6 +1,5 @@
 <?php
 
-namespace PokemonApp\Classes;
 
 class Charmeleon extends Pokemon {
     public function __construct(){

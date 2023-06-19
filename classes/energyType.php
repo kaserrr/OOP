@@ -1,6 +1,5 @@
 <?php
 
-namespace PokemonApp\Classes;
 
 class EnergyType {
     private $name;

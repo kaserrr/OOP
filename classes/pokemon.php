@@ -1,7 +1,5 @@
 <?php
 
-namespace PokemonApp\Classes;
-
 abstract class Pokemon {
     protected $name;
     protected $energyType;

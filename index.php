@@ -1,8 +1,9 @@
 <?php
 
-namespace PokemonApp\Classes;
-
 require "autoLoader.php";
+
+$pikachu = new Pikachu();
+$charmeleon = new Charmeleon();
 
 echo "Before Attack:\n";
 echo $pikachu->getName() . " health: " . $pikachu->getHealth() . "\n";

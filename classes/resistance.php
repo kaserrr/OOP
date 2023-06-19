@@ -1,7 +1,6 @@
 
 <?php
 
-namespace PokemonApp\Classes;
 
 class Resistance {
     private $energyType;
