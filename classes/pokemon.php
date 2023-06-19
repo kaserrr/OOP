@@ -22,6 +22,7 @@ abstract class Pokemon {
         self::$population++;
     }
 
+    // Method that calculates the damage
     public function attack($target, $attackIndex) {
         $attack = $this->attacks[$attackIndex];
         $damage = $attack->getDamage();
@@ -39,6 +40,7 @@ abstract class Pokemon {
         $target->takeDamage($damage);
     }
 
+    // Method that calculates the damage taken and calculates the remaining health left
     public function takeDamage($damage) {
         $this->health -= $damage;
 
@@ -52,7 +54,7 @@ abstract class Pokemon {
         return self::$population;
     }
 
-    // Encapsulation: Getters & Setters
+    // Getters
     public function getName() {
         return $this->name;
     }

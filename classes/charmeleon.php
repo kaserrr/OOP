@@ -1,6 +1,6 @@
 <?php
 
-
+// Extended child class from parent Pokemon class
 class Charmeleon extends Pokemon {
     public function __construct(){
         $name = "Charmeleon";

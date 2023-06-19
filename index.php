@@ -2,9 +2,11 @@
 
 require "autoLoader.php";
 
+// Create's the pokemon
 $pikachu = new Pikachu();
 $charmeleon = new Charmeleon();
 
+// Echo's the attack cycle and population
 echo "Before Attack:\n";
 echo $pikachu->getName() . " health: " . $pikachu->getHealth() . "\n";
 echo $charmeleon->getName() . " health: " . $charmeleon->getHealth() . "\n";
